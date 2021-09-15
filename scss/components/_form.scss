@@ -1,0 +1,80 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &__input {
+    width: 90%;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    @include responsive(phone) {
+      width: 80%;
+      margin: auto;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-pr;
+      &:invalid {
+        border-bottom: 3px solid $color-se;
+      }
+    }
+    &::placeholder {
+      color: $grey-d1;
+    }
+  }
+  &__label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    display: block;
+    transition: all 0.2s;
+  }
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+  &__radio-group {
+    display: inline-block;
+    width: 49%;
+  }
+  &__radio-icon {
+    display: none;
+  }
+  &__radio-label {
+    font-size: $default-font-size;
+    padding-left: 4rem;
+    position: relative;
+    cursor: pointer;
+  }
+  &__radio-custom-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid $color-pr;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+  }
+  &__radio-custom-icon::after {
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    display: inline-block;
+    background-color: $color-pr;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  &__radio-icon:checked + &__radio-label &__radio-custom-icon::after {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,160 @@
+.card {
+  height: 60rem;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  @include responsive(phone) {
+    height: 80rem;
+  }
+  @media (hover: none) {
+    height: 80rem;
+  }
+  &__side {
+    height: 55rem;
+    width: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba($black, 0.2);
+    @include responsive(phone) {
+      width: 60%;
+      position: relative;
+      left: 20%;
+    }
+    @media (hover: none) {
+      position: relative;
+    }
+    @include responsive(smallest) {
+      width: 80%;
+      left: 10%;
+    }
+    &--front {
+      background-color: $white;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &--1 {
+        background: linear-gradient(to right bottom, $color-sl, $color-se);
+      }
+      &--2 {
+        background: linear-gradient(to right bottom, $color-pl, $color-pd);
+      }
+      &--3 {
+        background: linear-gradient(to right bottom, $color-tl, $color-te);
+      }
+      @include responsive(phone) {
+        height: 25rem;
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -5rem;
+      }
+      @media (hover: none) {
+        height: 25rem;
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -5rem;
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+    @include responsive(phone) {
+      transform: rotateY(0);
+    }
+    @media (hover: none) {
+      transform: rotateY(0);
+    }
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+  //Front Side styles
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background-image: linear-gradient(to right, $color-sl, $color-se),
+        url(../img/nat-5.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(to right, $color-pl, $color-pd),
+        url(../img/nat-6.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(to right, $color-tl, $color-te),
+        url(../img/nat-7.jpg);
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    color: $white;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 300;
+    padding: 0 1rem;
+    width: 70%;
+    box-decoration-break: clone;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    &--1 {
+      background-color: rgba($color-sl, 0.9);
+    }
+    &--2 {
+      background-color: rgba($color-pl, 0.9);
+    }
+    &--3 {
+      background-color: rgba($color-tl, 0.9);
+    }
+  }
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style-type: none;
+      list-style-position: inside;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey-l2;
+        }
+      }
+    }
+  }
+  //Back side styles
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+  &__price-box {
+    text-align: center;
+    color: $white;
+    margin-bottom: 8rem;
+    @include responsive(phone) {
+      margin-bottom: 2rem;
+    }
+    @media (hover: none) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__price-box--only {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+  &__price-box--price {
+    font-size: 4rem;
+    font-weight: 100;
+  }
+}

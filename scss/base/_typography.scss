@@ -1,0 +1,93 @@
+// Importing Fonts
+$default-font-size: 1.6rem;
+$font-heading: "Lato", sans-serif;
+$font-paragraph: "Lato", sans-serif;
+
+.heading-primary {
+  color: $white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  @include responsive(tab-land) {
+    margin-bottom: 5rem;
+  }
+  @include responsive(tab-port) {
+    margin-bottom: 4rem;
+  }
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out;
+    @include responsive(tab-land) {
+      font-size: 5rem;
+    }
+    @include responsive(tab-port) {
+      font-size: 4rem;
+      letter-spacing: 2.5rem;
+    }
+    @include responsive(phone) {
+      font-size: 3rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+    font-weight: 700;
+    animation: moveInRight 1s ease-out;
+
+    @include responsive(tab-port) {
+      letter-spacing: 1rem;
+    }
+    @include responsive(phone) {
+      letter-spacing: 0.8rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, $color-pl, $color-pd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-out;
+  @include responsive(tab-land) {
+    font-size: 3rem;
+  }
+  @include responsive(tab-port) {
+    font-size: 2.5rem;
+  }
+  @include responsive(phone) {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  &:hover {
+    transform: skew(15deg, 3deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2);
+  }
+}
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+    @include responsive(phone) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.text--center {
+  text-align: center !important;
+}
