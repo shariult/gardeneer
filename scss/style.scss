@@ -1,14 +1,34 @@
-@import "vendor/vendor";
-
+//==========================================
+// Abstracts
+//==========================================
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
+//==========================================
+// Vendor
+//==========================================
+@import "vendor/vendor";
+
+//==========================================
+// Base
+//==========================================
 @import "base/base";
 @import "base/animation";
 @import "base/typography";
 @import "base/utilities";
 
+//==========================================
+// Layout
+//==========================================
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+//==========================================
+// Components
+//==========================================
 @import "components/button";
 @import "components/composition";
 @import "components/feature-box";
@@ -18,9 +38,7 @@
 @import "components/form";
 @import "components/popup";
 
-@import "layout/navigation";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
-
+//==========================================
+// Pages
+//==========================================
 @import "pages/home";
