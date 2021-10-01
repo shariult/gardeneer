@@ -5,17 +5,17 @@
 //==========================================
 // Variables
 //==========================================
-const navigationLinks = document.querySelectorAll(".navigation__link"),
-  navigationCheckbox = document.querySelector(".navigation__checkbox");
+const navbarLinks = document.querySelectorAll(".navbar__link"),
+  navbarCheckbox = document.querySelector(".navbar__checkbox");
 
 //==========================================
 // Code
 //==========================================
-Array.from(navigationLinks).forEach((navigationLink) => {
-  navigationLink.addEventListener("click", () => {
-    navigationCheckbox.checked
-      ? (navigationCheckbox.checked = false)
-      : (navigationCheckbox.checked = true);
+Array.from(navbarLinks).forEach((navbarLink) => {
+  navbarLink.addEventListener("click", () => {
+    navbarCheckbox.checked
+      ? (navbarCheckbox.checked = false)
+      : (navbarCheckbox.checked = true);
   });
 });
 
