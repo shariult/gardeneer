@@ -11,13 +11,18 @@ $color-se: #ff7730;
 $color-tl: #2998ff;
 $color-te: #5643fa;
 
-$grey-l1: #f7f7f7;
-$grey-l2: #eee;
-$grey-d1: #777;
-$grey-d2: #333;
-
 $white: #fff;
 $black: #000;
+
+// Grey Dark
+$grey-d1: #777777;
+$grey-d2: #333333;
+$grey-d3: #333333;
+
+// Grey Light
+$grey-l1: #f7f7f7;
+$grey-l2: #eeeeee;
+$grey-l3: #e1e1e1;
 
 //==========================================
 // Grid
@@ -25,5 +30,27 @@ $black: #000;
 $grid-width: 110rem;
 $gutter-vertical: 4rem;
 $gutter-horizontal: 6rem;
-$gutter-vertical-sm: 3rem;
-$gutter-horizontal-sm: 4rem;
+
+//==========================================
+// Box-Shadows
+//==========================================
+$shadow-s: 0.25rem 0.5rem 1rem rgba($grey-d3, 0.2);
+$shadow-m: 0.25rem 0.5rem 1rem rgba($grey-d3, 0.4);
+$shadow-l: 0.25rem 0.5rem 1rem rgba($grey-d3, 0.6);
+
+//==========================================
+// Transitions
+//==========================================
+$transition-s: all 0.2s linear;
+$transition-m: all 0.4s linear;
+$transition-l: all 0.6s linear;
+
+//==========================================
+// Additionals
+//==========================================
+$small-sm: 0.8rem;
+$small-sp: 1.2rem;
+$medium-md: 1.6rem;
+$medium-mp: 2rem;
+$large-lg: 2.8rem;
+$large-lp: 4rem;

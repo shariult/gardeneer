@@ -1,9 +1,13 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .card {
   height: 60rem;
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  @include responsive(phone) {
+  @include responsive(600) {
     height: 80rem;
   }
   @media (hover: none) {
@@ -20,7 +24,7 @@
     overflow: hidden;
     border-radius: 3px;
     box-shadow: 0 2rem 4rem rgba($black, 0.2);
-    @include responsive(phone) {
+    @include responsive(600) {
       width: 60%;
       position: relative;
       left: 20%;
@@ -28,7 +32,7 @@
     @media (hover: none) {
       position: relative;
     }
-    @include responsive(smallest) {
+    @include responsive(400) {
       width: 80%;
       left: 10%;
     }
@@ -46,7 +50,7 @@
       &--3 {
         background: linear-gradient(to right bottom, $color-tl, $color-te);
       }
-      @include responsive(phone) {
+      @include responsive(600) {
         height: 25rem;
         transform: rotateY(0);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
@@ -62,7 +66,7 @@
   }
   &:hover &__side--front {
     transform: rotateY(-180deg);
-    @include responsive(phone) {
+    @include responsive(600) {
       transform: rotateY(0);
     }
     @media (hover: none) {
@@ -142,7 +146,7 @@
     text-align: center;
     color: $white;
     margin-bottom: 8rem;
-    @include responsive(phone) {
+    @include responsive(600) {
       margin-bottom: 2rem;
     }
     @media (hover: none) {

@@ -1,44 +1,47 @@
-//==========================================
-// Abstracts
-//==========================================
-@import "abstracts/variables";
-@import "abstracts/functions";
-@import "abstracts/mixins";
+/*
+Theme Name: Gardeneer
+Theme URI: https://shariul.com/projects/gardeneer/
+Description: Landing page for a fictional company that sets up garden.
+Author: Md. Shariul Islam Tuhin
+Author URI: http://www.shariul.com
+Version: 1.0
+Tags: responsive, columns, custom menu, float layout, advanced css
+*/
 
 //==========================================
 // Vendor
 //==========================================
-@import "vendor/vendor";
+@use "vendor/vendor";
 
 //==========================================
 // Base
 //==========================================
-@import "base/base";
-@import "base/animation";
-@import "base/typography";
-@import "base/utilities";
+@use "base/base";
+@use "base/animation";
+@use "base/typography";
+@use "base/utilities";
 
 //==========================================
 // Layout
 //==========================================
-@import "layout/navigation";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
+@use "layout/navigation";
+@use "layout/grid";
+@use "layout/header";
+@use "layout/footer";
 
 //==========================================
 // Components
 //==========================================
-@import "components/button";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/card";
-@import "components/story";
-@import "components/video";
-@import "components/form";
-@import "components/popup";
+@use "components/button";
+@use "components/composition";
+@use "components/feature-box";
+@use "components/card";
+@use "components/story";
+@use "components/video";
+@use "components/form";
+@use "components/popup";
 
 //==========================================
 // Pages
 //==========================================
-@import "pages/home";
+@use "pages/home";

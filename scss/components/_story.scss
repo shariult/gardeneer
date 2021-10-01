@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -6,7 +10,7 @@
   padding-left: 9rem;
   box-shadow: 0 2rem 4rem rgba($black, 0.2);
   transform: skewX(-15deg);
-  @include responsive(smallest) {
+  @include responsive(400) {
     text-align: center;
     transform: skewX(0);
   }
@@ -18,7 +22,7 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translate(-3rem) skewX(15deg);
-    @include responsive(smallest) {
+    @include responsive(400) {
       float: none;
       display: inline-block;
       margin-left: 3rem;
@@ -32,7 +36,7 @@
     left: 50%;
     transform: translate(-50%, 150%);
     color: $white;
-    font-size: $default-font-size;
+    font-size: $medium-md;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.5s ease;
@@ -46,11 +50,11 @@
   }
   &__text {
     transform: skewX(15deg);
-    @include responsive(smallest) {
+    @include responsive(400) {
       transform: skewX(0);
     }
     p {
-      font-size: $default-font-size;
+      font-size: $medium-md;
     }
   }
   &:hover &__caption {

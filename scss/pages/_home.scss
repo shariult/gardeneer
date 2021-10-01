@@ -1,12 +1,16 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .section-about {
   background-color: $grey-l1;
   padding: 25rem 0;
   margin-top: -20vh;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     padding: 25rem 5rem;
     margin-top: -15vh;
   }
-  @include responsive(smallest) {
+  @include responsive(400) {
     padding: 20rem 5rem;
   }
 }
@@ -22,7 +26,7 @@
   background-position: top;
   padding: 20rem 0;
   margin-top: -10rem;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     padding: 15rem 4rem;
   }
   transform: skewY(-7deg);
@@ -31,10 +35,10 @@
   }
 }
 .section-packages {
-  padding: 25rem 0 5rem;
+  padding: 35rem 0 15rem;
   margin-top: -20vh;
   background-color: $grey-l1;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     padding: 20rem 0 4rem;
     margin-top: -10vh;
   }
@@ -42,14 +46,14 @@
 .section-stories {
   padding: 15rem 0;
   position: relative;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     padding: 12rem 0;
   }
 }
 .section-book {
   background: linear-gradient(to right, $color-pl, $color-pd);
   padding: 15rem 0;
-  @include responsive(phone) {
+  @include responsive(600) {
     padding: 0;
   }
 }
@@ -60,22 +64,22 @@
   background: linear-gradient(
       105deg,
       rgba($white, 0.9) 0%,
-      rgba($white, 0.9) 50%,
-      transparent 50%
+      rgba($white, 0.9) 60%,
+      transparent 60%
     ),
     url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
   &__form {
-    width: 50%;
+    width: 60%;
     padding: 5rem 0;
-    @include responsive(phone) {
+    @include responsive(800) {
       width: 100%;
       text-align: center;
     }
   }
-  @include responsive(phone) {
+  @include responsive(800) {
     background: linear-gradient(
       105deg,
       rgba($white, 0.9) 0%,

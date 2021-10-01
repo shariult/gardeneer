@@ -1,5 +1,9 @@
+//=============Imports Start=============
+@use "sass:math";
+//=============Imports End===============
+
 //==========================================
-// Clearing Floats
+// Clearfix
 //==========================================
 @mixin clearfix {
   &::after {
@@ -12,33 +16,15 @@
 //==========================================
 // Responsive Design
 //==========================================
-@mixin responsive($device) {
-  @if $device == phone {
-    @media only screen and (max-width: 37.5em) {
-      @content;
-    }
-  } @else if $device == tab-port {
-    @media only screen and (max-width: 50em) {
-      @content;
-    }
-  } @else if $device == tab-land {
-    @media only screen and (max-width: 64em) {
-      @content;
-    }
-  } @else if $device == smallest {
-    @media only screen and (max-width: 25em) {
-      @content;
-    }
-  }
-  else {
-    @media only screen and (min-width: 100em) {
-      @content;
-    }
+@mixin responsive($screenWidth) {
+  $breakpoint: math.div($screenWidth, 16);
+  @media only screen and (max-width: $breakpoint + em) {
+    @content;
   }
 }
 
 //==========================================
-// Center
+// Center Elements
 //==========================================
 @mixin flexCenter {
   display: flex;

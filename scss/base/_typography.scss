@@ -1,17 +1,38 @@
-// Importing Fonts
-$default-font-size: 1.6rem;
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 $font-heading: "Lato", sans-serif;
 $font-paragraph: "Lato", sans-serif;
+
+// Setting Fonts
+body {
+  font-weight: 400;
+  font-family: $font-paragraph;
+  font-size: $medium-md;
+  color: $grey-d1;
+  line-height: 1.7; // equal to font-size
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+}
 
 .heading-primary {
   color: $white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     margin-bottom: 5rem;
   }
-  @include responsive(tab-port) {
+  @include responsive(800) {
     margin-bottom: 4rem;
   }
   &--main {
@@ -20,14 +41,14 @@ $font-paragraph: "Lato", sans-serif;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
-    @include responsive(tab-land) {
+    @include responsive(1024) {
       font-size: 5rem;
     }
-    @include responsive(tab-port) {
+    @include responsive(800) {
       font-size: 4rem;
       letter-spacing: 2.5rem;
     }
-    @include responsive(phone) {
+    @include responsive(600) {
       font-size: 3rem;
     }
   }
@@ -38,10 +59,10 @@ $font-paragraph: "Lato", sans-serif;
     font-weight: 700;
     animation: moveInRight 1s ease-out;
 
-    @include responsive(tab-port) {
+    @include responsive(800) {
       letter-spacing: 1rem;
     }
-    @include responsive(phone) {
+    @include responsive(600) {
       letter-spacing: 0.8rem;
     }
   }
@@ -58,13 +79,13 @@ $font-paragraph: "Lato", sans-serif;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s ease-out;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     font-size: 3rem;
   }
-  @include responsive(tab-port) {
+  @include responsive(800) {
     font-size: 2.5rem;
   }
-  @include responsive(phone) {
+  @include responsive(600) {
     font-size: 2rem;
     letter-spacing: 1px;
   }
@@ -74,15 +95,15 @@ $font-paragraph: "Lato", sans-serif;
   }
 }
 .heading-tertiary {
-  font-size: $default-font-size;
+  font-size: $medium-md;
   font-weight: 700;
   text-transform: uppercase;
 }
 .paragraph {
-  font-size: $default-font-size;
+  font-size: $medium-md;
   &:not(:last-child) {
     margin-bottom: 3rem;
-    @include responsive(phone) {
+    @include responsive(600) {
       margin-bottom: 2rem;
     }
   }

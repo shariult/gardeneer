@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;

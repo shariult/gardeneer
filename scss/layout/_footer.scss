@@ -1,11 +1,15 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .footer {
   background-color: $grey-d2;
   color: $grey-l1;
   padding: 10rem 0;
-  @include responsive(tab-land) {
+  @include responsive(1024) {
     padding: 8rem;
   }
-  @include responsive(smallest) {
+  @include responsive(400) {
     letter-spacing: 0.5px;
     padding: 6rem 4rem;
   }
@@ -14,26 +18,26 @@
   }
   .footer__logo {
     width: 15rem;
-    @include responsive(tab-port) {
+    @include responsive(800) {
       width: 12rem;
     }
-    @include responsive(phone) {
+    @include responsive(600) {
       width: 10rem;
     }
   }
   &__navigation {
     border-top: 1px solid $grey-l1;
     display: inline-block;
-    @include responsive(phone) {
+    @include responsive(600) {
       display: block;
     }
   }
   &__nav-list {
     list-style-type: none;
-    @include responsive(phone) {
+    @include responsive(600) {
       margin: 0 15%;
     }
-    @include responsive(smallest) {
+    @include responsive(400) {
       margin: 0;
     }
   }

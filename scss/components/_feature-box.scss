@@ -1,3 +1,7 @@
+//=============Imports Start=============
+@use "../abstracts/" as *;
+//=============Imports End===============
+
 .feature-box {
   background: rgba($white, 0.8);
   font-size: 1.5rem;
@@ -5,7 +9,7 @@
   padding: 2.5rem;
   transition: all 0.2s ease-out;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
-  @include responsive(phone) {
+  @include responsive(600) {
     width: 70%;
     margin: 5rem auto;
   }
@@ -16,7 +20,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    @include responsive(phone) {
+    @include responsive(600) {
       font-size: 7rem;
     }
   }
